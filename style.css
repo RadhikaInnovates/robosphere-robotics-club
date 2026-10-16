@@ -29,6 +29,20 @@ body {
     text-decoration: none;
 
 }
+.logo-link{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+.logo-img{
+    width: 46px;
+height: 46px;
+transition: transform 0.6s ease;
+}
+.logo-link:hover .logo-img{
+    transform: rotate(360deg) scale(1.1);
+}
 .logo-text {
   text-decoration: none;
     font-size: 1.7rem;
@@ -232,19 +246,41 @@ body {
     text-align: center;
     scroll-margin-top: 82px;
 }
-.section-title {
-    margin: 0;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    font-size:medium;
-    font-weight: 900;
-    background: linear-gradient(90deg, #006d7a, #00b4d8);
-    background-clip: text;
-    display: inline-block;
-    transition: transform 0.4s ease, filter 0.4s ease;
+.section-tag {
+    display: table;
+    margin: 0 auto 18px;
+    padding: 6px 20px;
+    background: #ffffff;
+    border: 1px solid #00a3b4;
+    border-radius: 50px;
+    color: #007b8a;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    animation: glowPulse 3.5s ease-in-out infinite;
 }
+
+.section-title {
+    display: inline-block;
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    font-weight: 900;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #006d7a, #00b4d8, #7a3cff, #00b4d8, #006d7a);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientFlow 6s linear infinite;
+    transition: transform 0.4s ease, letter-spacing 0.4s ease;
+}
+
 .section-title:hover {
-    transform: scale(1);
-    filter: drop-shadow(0 0 14px rgba(0, 180, 216, 0.5));
+    transform: scale(1.04);
+    letter-spacing: 4px;
 }
 .title-bar {
     width: 80px;
@@ -255,7 +291,7 @@ body {
     transition: width 0.5s ease;
 }
 .section-title:hover + .title-bar {
-    width: 160px;
+    width: 200px;
 }
 .section-subtitle {
     max-width: 700px;
@@ -263,6 +299,13 @@ body {
     color: #3d5a6c;
     font-family:Georgia, 'Times New Roman', Times, serif;
     font-size: 1.2rem;
+}
+@keyframes gradientFlow {
+    to { background-position: 200% center; }
+}
+
+@keyframes barFlow {
+    to { background-position: 200% 0; }
 }
 .cards {
     display: grid;
@@ -282,7 +325,7 @@ body {
     box-shadow: 0 6px 18px rgba(0, 150, 170, 0.1);
     transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
 }
-/* card ke upar ki teal strip*/
+/* card strip*/
 .card::before {
     content: "";
     position: absolute;
@@ -326,4 +369,145 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 1rem;
     line-height: 1.7;
+}
+/* -------------------------- PROJECTS SECTION -------------------------- */
+.projects {
+    padding: 100px 20px;
+    text-align: center;
+    scroll-margin-top: 82px;
+}
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+.project-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    text-align: left;
+    background: #ffffff;
+    border: 1px solid rgba(0, 150, 170, 0.25);
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0, 150, 170, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+.project-card:hover {
+    transform: translateY(-12px);
+    border-color: #00cfd1;
+    box-shadow: 0 18px 35px rgba(0, 163, 180, 0.28);
+}
+.project-img {
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+    background: #e8fbfd;
+}
+.project-img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+.project-card:hover .project-img img,
+.project-card:hover .project-placeholder {
+    transform: scale(1.12);
+}
+
+
+.project-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 5rem;
+    background: linear-gradient(135deg, #a8f0f7, #7ec8ff);
+    transition: transform 0.6s ease;
+}
+.project-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 6px 16px;
+    background: #ffffff;
+    border: 1px solid #00a3b4;
+    border-radius: 50px;
+    color: #007b8a;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    transition: transform 0.35s ease, background-color 0.35s ease, color 0.35s ease;
+}
+.project-card:hover .project-badge {
+    transform: scale(1.1);
+    background: #00a3b4;
+    color: #ffffff;
+}
+.project-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 28px;
+}
+.project-body h3 {
+    margin: 0 0 12px;
+    color: #0b3c49;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+.project-body p {
+    margin: 0 0 20px;
+    color: #4a6577;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+}
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+.tag {
+    padding: 6px 12px;
+    background: #e6fafc;
+    border: 1px solid rgba(0, 150, 170, 0.25);
+    border-radius: 6px;
+    color: #007b8a;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+.tag:hover {
+    transform: translateY(-4px);
+    background: #00a3b4;
+    color: #ffffff;
+}
+.project-link {
+    display: inline-block;
+    align-self: flex-start;
+    margin-top: auto;
+    color: #00a3b4;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.project-link span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+.project-link:hover {
+    color: #4a1fb8;
+    transform: translateX(4px);
+}
+.project-link:hover span {
+    transform: translateX(8px);
 }

@@ -10,6 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Orbitron:wght@500;700;900&family=Inter:wght@400;500&family=Rajdhani:wght@600;700&display=swap"
         rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="logo-icon.svg">
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -17,7 +18,10 @@
 <body>
     <header class="navbar">
         <div class="logo">
-            <a href="#" class="logo-text">🤖 ROBOSPHERE 🤖</a>
+            <a href="#" class="logo-link">
+                <img src="logo-icon.svg" alt="Robosphere logo" class="logo-img">
+                <span class="logo-text">ROBOSPHERE</span>
+            </a>
         </div>
         <nav>
             <ul class="nav-links">
@@ -47,6 +51,7 @@
         </div>
     </section>
     <section class="about">
+        <span class="section-tag">What We Do</span>
         <h2 class="section-title">About ROBOSPHERE</h2>
         <div class="title-bar"></div>
         <p class="section-subtitle">
@@ -83,6 +88,94 @@
             </div>
         </div>
     </section>
+    <section class="projects" id="projects">
+        <span class="section-tag">Our Work</span>
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="title-bar"></div>
+    <p class="section-subtitle">
+        Check out our latest student-built hardware and software breakthroughs
+    </p>
+
+    <div class="project-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card">
+            <div class="project-img">
+                <img src="line_follow.png" alt="Line follower robot">
+                <span class="project-badge">Autonomous</span>
+            </div>
+            <div class="project-body">
+                <h3>Line Follower Robot</h3>
+                <p>Two-wheel robot that tracks a black line using IR sensors and
+                   corrects its path in real time with motor driver control.</p>
+                <div class="tags">
+                    <span class="tag">Arduino Uno</span>
+                    <span class="tag">IR Sensors</span>
+                    <span class="tag">L298N</span>
+                </div>
+                <a href="#" class="project-link">View Details <span>→</span></a>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+            <div class="project-img">
+                <img src="pick%20and%20place%20robot.png" alt="Pick and place robotic arm">
+                <span class="project-badge">Robotic Arm</span>
+            </div>
+            <div class="project-body">
+                <h3>Pick &amp; Place Arm</h3>
+                <p>Servo-driven robotic arm that picks up objects and places them
+                   at a set position with smooth, repeatable motion.</p>
+                <div class="tags">
+                    <span class="tag">Servo Motors</span>
+                    <span class="tag">Arduino</span>
+                    <span class="tag">4-DOF</span>
+                </div>
+                <a href="#" class="project-link">View Details <span>→</span></a>
+            </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+            <div class="project-img">
+                <img src="image.png" alt="  ">
+                <span class="project-badge">Navigation</span>
+            </div>
+            <div class="project-body">
+                <h3>Obstacle Avoiding Car</h3>
+                <p>Ultrasonic sensor scans the path ahead and the car automatically
+                   turns away from obstacles without any human input.</p>
+                <div class="tags">
+                    <span class="tag">Ultrasonic</span>
+                    <span class="tag">Arduino</span>
+                    <span class="tag">Servo</span>
+                </div>
+                <a href="#" class="project-link">View Details <span>→</span></a>
+            </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card">
+            <div class="project-img">
+                <img src="image2.png" alt="  ">
+                <span class="project-badge">Wireless</span>
+            </div>
+            <div class="project-body">
+                <h3>Bluetooth Controlled Car</h3>
+                <p>Robot car driven from a smartphone app over Bluetooth, with
+                   forward, reverse, turn and speed control.</p>
+                <div class="tags">
+                    <span class="tag">HC-05</span>
+                    <span class="tag">Arduino</span>
+                    <span class="tag">Android App</span>
+                </div>
+                <a href="#" class="project-link">View Details <span>→</span></a>
+            </div>
+        </div>
+
+    </div>
+</section>
 </body>
 
 </html>
