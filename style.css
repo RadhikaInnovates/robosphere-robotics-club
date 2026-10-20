@@ -39,8 +39,9 @@ body {
     width: 46px;
 height: 46px;
 transition: transform 0.6s ease;
+display: block;
 }
-.logo-link:hover .logo-img{
+.logo-:hover .logo-img{
     transform: rotate(360deg) scale(1.1);
 }
 .logo-text {
@@ -701,5 +702,273 @@ transition: transform 0.6s ease;
     }
     .event-info h3 {
         font-size: 1.6rem;
+    }
+}
+/* CONTACT SECTION */
+/* =====================================================
+   CONTACT SECTION (light theme, minimal animation)
+   ===================================================== */
+.contact {
+    padding: 100px 20px;
+    text-align: center;
+    scroll-margin-top: 82px;
+}
+
+/* ---------- Heading ---------- */
+.contact .section-tag {
+    display: table;
+    margin: 0 auto 18px;
+    padding: 6px 20px;
+    background: #ffffff;
+    border: 1px solid #00a3b4;
+    border-radius: 50px;
+    color: #007b8a;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.contact .section-title {
+    display: inline-block;
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 900;
+    background: linear-gradient(90deg, #006d7a, #00b4d8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contact .title-bar {
+    width: 80px;
+    height: 4px;
+    margin: 18px auto 24px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, #00b4d8, #7a3cff);
+}
+
+.contact .section-subtitle {
+    max-width: 700px;
+    margin: 0 auto 60px;
+    color: #3d5a6c;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+}
+
+/* ---------- Main box (2 columns) ---------- */
+.contact-box {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 60px;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 50px;
+    text-align: left;
+    background: #ffffff;
+    border: 1px solid rgba(0, 150, 170, 0.25);
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(0, 150, 170, 0.12);
+}
+
+/* ---------- Left: contact info ---------- */
+.contact-info h3 {
+    margin: 0 0 16px;
+    color: #0b3c49;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.contact-intro {
+    margin: 0 0 36px;
+    color: #4a6577;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 24px;
+    transition: transform 0.3s ease;
+}
+
+.info-item:hover {
+    transform: translateX(5px);
+}
+
+.info-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background: #e6fafc;
+    border: 1px solid rgba(0, 150, 170, 0.35);
+    border-radius: 12px;
+    font-size: 1.4rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.info-item:hover .info-icon {
+    background: #b9f3f8;
+    transform: scale(1.08);
+}
+
+.info-item h4 {
+    margin: 0 0 4px;
+    color: #0b3c49;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.info-item p {
+    margin: 0;
+    color: #4a6577;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+}
+
+/* ---------- Right: form ---------- */
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group > label {
+    display: block;
+    margin-bottom: 8px;
+    color: #0b3c49;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 18px;
+    background: #f4feff;
+    border: 1px solid rgba(0, 150, 170, 0.3);
+    border-radius: 10px;
+    color: #0b3c49;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    outline: none;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form ::placeholder {
+    color: #8aa5b3;
+}
+
+.contact-form input[type="text"]:hover,
+.contact-form input[type="email"]:hover,
+.contact-form textarea:hover {
+    border-color: #00a3b4;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    transform: translateY(-2px);
+    background: #ffffff;
+    border-color: #00cfd1;
+    box-shadow: 0 6px 16px rgba(0, 207, 209, 0.22);
+}
+
+/* ---------- Radio options ---------- */
+.radio-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.radio-option {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    background: #f4feff;
+    border: 1px solid rgba(0, 150, 170, 0.3);
+    border-radius: 50px;
+    color: #4a6577;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.radio-option input {
+    accent-color: #00a3b4;
+    cursor: pointer;
+}
+
+.radio-option:hover {
+    transform: translateY(-2px);
+    border-color: #00a3b4;
+    color: #007b8a;
+}
+
+/* jo option select hai wo teal se bhar jaata hai */
+.radio-option:has(input:checked) {
+    background: #00a3b4;
+    border-color: #00a3b4;
+    color: #ffffff;
+}
+
+/* ---------- Send button ---------- */
+.send-btn {
+    width: 100%;
+    padding: 18px;
+    background: linear-gradient(90deg, #00eaff, #00a8ff);
+    border: none;
+    border-radius: 8px;
+    color: #031018;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 0 14px rgba(0, 234, 255, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.send-icon {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.send-btn:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 10px 22px rgba(0, 234, 255, 0.5);
+}
+
+.send-btn:hover .send-icon {
+    transform: translateX(5px) scale(1.15);
+}
+
+.send-btn:active {
+    transform: translateY(0) scale(0.98);
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 850px) {
+    .contact-box {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 30px 22px;
     }
 }
