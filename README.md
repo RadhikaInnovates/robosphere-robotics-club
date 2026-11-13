@@ -26,8 +26,8 @@ Website Sections
 - Footer --- Quick navigation links and additional club
   information.
 Built With
-- HTML
-- CSS
+- HTML5
+- CSS3
 - SVG icons
   
 Project Structure
